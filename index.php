@@ -360,17 +360,18 @@
     	</div>
     	<div class="container">
     		<div class="row">
-    			<div class="col-sm col-md-6 col-lg ftco-animate">
+			<?php while ($produk = mysqli_fetch_array($queryProduk)) { ?>
+    			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-5.jpg" alt="Colorlib Template">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="image/<?php echo $produk['foto']; ?>" alt="Colorlib Template">
     						<span class="status">30%</span>
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 px-3">
-    						<h3><a href="#">Floral Jackquard Pullover</a></h3>
+    						<h3><a href="#"><?php echo $produk['nama']; ?></a></h3>
     						<div class="d-flex">
     							<div class="pricing">
-		    						<p class="price"><span class="mr-2 price-dc">$120.00</span><span class="price-sale">$80.00</span></p>
+		    						<p class="price"><span class="mr-2 price-dc"><?php echo $produk['harga']; ?></span><span class="price-sale">$80.00</span></p>
 		    					</div>
 		    					<div class="rating">
 	    							<p class="text-right">
@@ -389,6 +390,8 @@
     					</div>
     				</div>
     			</div>
+				<?php } ?>
+
     			<div class="col-sm col-md-6 col-lg ftco-animate">
     				<div class="product">
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/product-6.jpg" alt="Colorlib Template">
