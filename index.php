@@ -480,7 +480,7 @@
     	</div>
     </section>
 
-    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);">
+    <!--<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);">
     	<div class="container">
     		<div class="row justify-content-center py-5">
     			<div class="col-md-10">
@@ -521,9 +521,9 @@
 	        </div>
         </div>
     	</div>
-    </section>
+    </section>-->
 
-    <section class="ftco-section testimony-section">
+    <!--<section class="ftco-section testimony-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate">
@@ -608,7 +608,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
 		<hr>
 
 		<section class="ftco-section-parallax">
