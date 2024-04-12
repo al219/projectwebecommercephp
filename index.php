@@ -132,7 +132,7 @@
 	    </div>
     </section>
 
-    <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
+    <!-- <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
@@ -200,18 +200,18 @@
     	</div>
     	<div class="container">
     		<div class="row">
-				<?php while ($produk = mysqli_fetch_array($queryProduk)) { ?>
+				
     				<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate">
     					<div class="product">
-    						<a href="#" class="img-prod"><img class="img-fluid" src="image/<?php echo $produk['foto']; ?>" alt="Colorlib Template">
-    							<!-- <span class="status">30%</span> -->
+    						<a href="#" class="img-prod"><img class="img-fluid" src="image/" alt="Colorlib Template">
+    							<span class="status">30%</span>
     							<div class="overlay"></div>
     						</a>
     						<div class="text py-3 px-3">
-    							<h3><a href="#"><?php echo $produk['nama']; ?></a></h3>
+    							<h3><a href="#"></a></h3>
     							<div class="d-flex">
     								<div class="pricing">
-		    							<p class="price"><span><?php echo $produk['harga']; ?><!--</span><span class="price-sale">$80.00</span></p>-->
+		    							<p class="price"><span></span><span class="price-sale">$80.00</span></p>
 		    						</div>
 		    						<div class="rating">
 	    								<p class="text-right">
@@ -230,10 +230,9 @@
     						</div>
     					</div>
     				</div>
-					<?php } ?>
     			</div>
     		</div>
-    </section>
+    </section> -->
 
     <section class="ftco-section ftco-choose ftco-no-pb ftco-no-pt">
     	<div class="container">
