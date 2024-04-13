@@ -1,3 +1,10 @@
+<?php 
+	session_start();
+	$total_harga=0;
+	foreach ($_SESSION['cart'] as $key => $value) {
+		$total_harga += $value['harga'];
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -102,51 +109,26 @@
 						        <th>Product</th>
 						        <th>Price</th>
 						        <th>Quantity</th>
-						        <th>Total</th>
 						      </tr>
 						    </thead>
 						    <tbody>
-						      <tr class="text-center">
-						        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
-						        
-						        <td class="image-prod"><div class="img" style="background-image:url(images/product-3.jpg);"></div></td>
-						        
-						        <td class="product-name">
-						        	<h3>Young Woman Wearing Dress</h3>
-						        	<p>Far far away, behind the word mountains, far from the countries</p>
-						        </td>
-						        
-						        <td class="price">$4.90</td>
-						        
-						        <td class="quantity">
-						        	<div class="input-group mb-3">
-					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-					          	</div>
-					          </td>
-						        
-						        <td class="total">$4.90</td>
-						      </tr><!-- END TR-->
-
-						      <tr class="text-center">
-						        <td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
-						        
-						        <td class="image-prod"><div class="img" style="background-image:url(images/product-4.jpg);"></div></td>
-						        
-						        <td class="product-name">
-						        	<h3>Young Woman Wearing Dress</h3>
-						        	<p>Far far away, behind the word mountains, far from the countries</p>
-						        </td>
-						        
-						        <td class="price">$15.70</td>
-						        
-						        <td class="quantity">
-						        	<div class="input-group mb-3">
-					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-					          	</div>
-					          </td>
-						        
-						        <td class="total">$15.70</td>
-						      </tr><!-- END TR-->
+						<?php foreach ($_SESSION['cart'] as $produk): ?>
+							<tr class="text-center">
+								<td class="product-remove"><a href="#"><span class="ion-ios-close"></span></a></td>
+								<td class="image-prod"><div class="img" style="background-image:url(image/<?php echo $produk['foto']; ?>);"></div></td>
+								<td class="product-name">
+									<h3><?php echo $produk['nama']; ?></h3>
+									<p>Far far away, behind the word mountains, far from the countries</p>
+								</td>
+								<td class="price"><?php echo $produk['harga']; ?></td>
+								<td class="quantity">
+									<div class="input-group mb-3">
+										<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+									</div>
+								</td>
+								<!-- <td class="total"><?php echo $produk['harga']; ?></td> -->
+							</tr>
+						<?php endforeach; ?><!-- END TR-->
 						    </tbody>
 						  </table>
 					  </div>
@@ -156,22 +138,9 @@
     			<div class="col col-lg-5 col-md-6 mt-5 cart-wrap ftco-animate">
     				<div class="cart-total mb-3">
     					<h3>Cart Totals</h3>
-    					<p class="d-flex">
-    						<span>Subtotal</span>
-    						<span>$20.60</span>
-    					</p>
-    					<p class="d-flex">
-    						<span>Delivery</span>
-    						<span>$0.00</span>
-    					</p>
-    					<p class="d-flex">
-    						<span>Discount</span>
-    						<span>$3.00</span>
-    					</p>
-    					<hr>
     					<p class="d-flex total-price">
     						<span>Total</span>
-    						<span>$17.60</span>
+    						<span><?php echo $total_harga ?></span>
     					</p>
     				</div>
     				<p class="text-center"><a href="checkout.php" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>
