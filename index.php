@@ -1,7 +1,24 @@
 <?php
 	require "koneksi.php";
 
-	$queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM produk LIMIT 6");
+	session_start();
+
+	// Check if the cart is already created. If not, create it
+	if (!isset($_SESSION['cart'])) {
+		$_SESSION['cart'] = array();
+	}
+
+	// Add product to the cart
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		$produk_id = $_POST['produk_id'];
+		$produk_nama = $_POST['produk_nama'];
+		$produk_harga = $_POST['produk_harga'];
+		$produk_foto = $_POST['produk_foto'];
+		$produk_ketersediaan_stok = $_POST['produk_ketersediaan_stok'];
+		array_push($_SESSION['cart'], array('id' => $produk_id, 'nama' => $produk_nama, 'harga' => $produk_harga, 'foto' => $produk_foto, 'ketersediaan_stok' => $produk_ketersediaan_stok));
+	}
+
+	$queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM produk LIMIT 10");
 ?>
 
 <!DOCTYPE html>
@@ -279,7 +296,7 @@
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
     					<a href="#" class="img-prod"><img class="img-fluid" src="image/<?php echo $produk['foto']; ?>" alt="Colorlib Template">
-    						<span class="status">30%</span>
+    						<!-- <span class="status">30%</span> -->
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 px-3">

@@ -20,7 +20,7 @@
 
 
 	// Dump cart data
-	// var_dump($_SESSION['cart']);
+	//ON['cart']); var_dump($_SESSI
 
 	$queryKategori = mysqli_query($con, "SELECT * FROM kategori");
 	
@@ -201,7 +201,7 @@
 
 		    	<div class="col-md-4 col-lg-2 sidebar">
 		    		<div class="sidebar-box-2">
-		    			<h2 class="heading mb-4"><a href="#">Clothing</a></h2>
+		    			<h2 class="heading mb-4"><a href="#">Kategori</a></h2>
 						<?php while ($kategori = mysqli_fetch_array($queryKategori)) { ?>
 							<a class="no-decoration" href="shop.php?kategori=<?php echo $kategori['nama']; ?>">							
 								<ul><?php echo $kategori['nama']; ?></ul>
