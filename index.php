@@ -295,7 +295,7 @@
 			<?php while ($produk = mysqli_fetch_array($queryProduk)) { ?>
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
-    					<a href="#" class="img-prod"><img class="img-fluid" src="image/<?php echo $produk['foto']; ?>" alt="Colorlib Template">
+    					<a href="product-single.php?nama=<?php echo $produk['nama']; ?>" class="img-prod"><img class="img-fluid" src="image/<?php echo $produk['foto']; ?>" alt="Colorlib Template">
     						<!-- <span class="status">30%</span> -->
     						<div class="overlay"></div>
     					</a>

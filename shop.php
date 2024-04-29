@@ -39,6 +39,10 @@
 
 	// session_destroy();
 	$countData = mysqli_num_rows($queryProduk);
+
+	if (isset($_POST['buy_now'])) {
+		header("location: cart.php");
+	}
 ?>
 
 <!DOCTYPE html>
@@ -147,7 +151,7 @@
 						<?php while ($produk = mysqli_fetch_array($queryProduk)) { ?>
 		    				<div class="col-sm-6 col-md-6 col-lg-4 ftco-animate">
 		    					<div class="product">
-		    						<a href="#" class="img-prod"><img class="img-fluid" src="image/<?php echo $produk['foto']; ?>" alt="Colorlib Template">
+		    						<a href="product-single.php?nama=<?php echo $produk['nama']; ?>" class="img-prod"><img class="img-fluid" src="image/<?php echo $produk['foto']; ?>" alt="Colorlib Template">
 		    							<div class="overlay"></div>
 		    						</a>
 		    						<div class="text py-3 px-3">
@@ -174,7 +178,8 @@
 												<input type="hidden" name="produk_foto" value="<?php echo $produk['foto']; ?>">
 												<input type="hidden" name="produk_ketersediaan_stok" value="<?php echo $produk['ketersediaan_stok']; ?>">
 												<input type="submit" value="Add to cart" class="add-to-cart text-center py-2 mr-1">
-												<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+												<input type="submit" name="buy_now" value="Buy Now" class="buy-now text-center py-2">
+												<!-- <a href="cart.php" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a> -->
 											</p>
 										</form>
 		    						</div>
@@ -185,15 +190,6 @@
 		    		<div class="row mt-5">
 		          <div class="col text-center">
 		            <div class="block-27">
-		              <ul>
-		                <li><a href="#">&lt;</a></li>
-		                <li class="active"><span>1</span></li>
-		                <li><a href="#">2</a></li>
-		                <li><a href="#">3</a></li>
-		                <li><a href="#">4</a></li>
-		                <li><a href="#">5</a></li>
-		                <li><a href="#">&gt;</a></li>
-		              </ul>
 		            </div>
 		          </div>
 		        </div>
