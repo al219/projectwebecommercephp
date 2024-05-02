@@ -117,7 +117,7 @@
 						<?php foreach ($_SESSION['cart'] as $produk): ?>
 							<tr class="text-center">
 								<td class="product-remove">
-									<a href="deletecart.php?nama=<?php echo $produk['nama']; ?>"><span class="ion-ios-close"></span></a>
+									<a href="hapus.php?id=<?php echo $id?>"><span class="ion-ios-close"></span></a>
 								</td>
 								<td class="image-prod"><div class="img" style="background-image:url(image/<?php echo $produk['foto']; ?>);"></div></td>
 								<td class="product-name">

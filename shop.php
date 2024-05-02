@@ -177,9 +177,9 @@
 												<input type="hidden" name="produk_harga" value="<?php echo $produk['harga']; ?>">
 												<input type="hidden" name="produk_foto" value="<?php echo $produk['foto']; ?>">
 												<input type="hidden" name="produk_ketersediaan_stok" value="<?php echo $produk['ketersediaan_stok']; ?>">
-												<input type="submit" value="Add to cart" class="add-to-cart text-center py-2 mr-1">
+												<!-- <input type="submit" value="Add to cart" class="add-to-cart text-center py-2 mr-1"> -->
 												<input type="submit" name="buy_now" value="Buy Now" class="buy-now text-center py-2">
-												<!-- <a href="cart.php" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a> -->
+												<a href="tambah.php?id=<?php echo $data["id_produk"];?>" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
 											</p>
 										</form>
 		    						</div>

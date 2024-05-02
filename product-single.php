@@ -132,18 +132,10 @@
 							<div class="col-md-6">
 								<div class="form-group d-flex">
 		              <div class="select-wrap">
-	                  <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                  <select name="" id="" class="form-control">
-	                  	<option value="">Small</option>
-	                    <option value="">Medium</option>
-	                    <option value="">Large</option>
-	                    <option value="">Extra Large</option>
-	                  </select>
-	                </div>
-		            </div>
+	                  <!-- <div class="icon"><span class="ion-ios-arrow-down"></span></div> -->
 							</div>
 							<div class="w-100"></div>
-							<div class="input-group col-md-6 d-flex mb-3">
+							<div class="input-group col-md-12 d-flex mb-3">
 	             	<span class="input-group-btn mr-2">
 	                	<button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="">
 	                   <i class="ion-ios-remove"></i>
