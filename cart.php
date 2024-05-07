@@ -7,6 +7,7 @@
 
 	unset($_POST['buy_now']);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -114,25 +115,27 @@
 						      </tr>
 						    </thead>
 						    <tbody>
-						<?php foreach ($_SESSION['cart'] as $produk): ?>
-							<tr class="text-center">
-								<td class="product-remove">
-									<a href="hapus.php?id=<?php echo $id?>"><span class="ion-ios-close"></span></a>
-								</td>
-								<td class="image-prod"><div class="img" style="background-image:url(image/<?php echo $produk['foto']; ?>);"></div></td>
-								<td class="product-name">
-									<h3><?php echo $produk['nama']; ?></h3>
-									<p>Far far away, behind the word mountains, far from the countries</p>
-								</td>
-								<td class="price"><?php echo $produk['harga']; ?></td>
-								<td class="quantity">
-									<div class="input-group mb-3">
-										<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
-									</div>
-								</td>
-								<!-- <td class="total"><?php echo $produk['harga']; ?></td> -->
-							</tr>
-						<?php endforeach; ?><!-- END TR-->
+							<?php $no = 0;
+								foreach ($_SESSION['cart'] as $produk) { ?>
+									<tr class="text-center">
+										<td class="product-remove">
+											<a href="hapus.php?id=<?php echo $no?>"><span class="ion-ios-close"></span></a>
+										</td>
+										<td class="image-prod"><div class="img" style="background-image:url(image/<?php echo $produk['foto']; ?>);"></div></td>
+										<td class="product-name">
+											<h3><?php echo $produk['nama']; ?></h3>
+											<p>Far far away, behind the word mountains, far from the countries</p>
+										</td>
+										<td class="price"><?php echo $produk['harga']; ?></td>
+										<td class="quantity">
+											<div class="input-group mb-3">
+												<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+											</div>
+										</td>
+										<!-- <td class="total"><?php echo $produk['harga']; ?></td> -->
+									</tr>
+								<?php $no++;
+							} ?><!-- END TR-->
 						    </tbody>
 						  </table>
 					  </div>
