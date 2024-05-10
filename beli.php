@@ -1,14 +1,16 @@
 <?php
+    require "koneksi.php";
+
     session_start();
-    include "koneksi.php";
-    $tg = date("Y:m:d");
-    $sql = "INSERT INTO tbl_transaksi(tanggal) VALUES('$tg')";
-    $query = mysqli_query($konek, $sql);
-    $id_t = mysqli_insert_id($konek);
-    foreach($_SESSION["cart"] as $cart => $val){
-        $sql = "INSERT INTO tbl_detail(id_transaksi, id_produk,jumlah) VALUES(".$id_t.",".$cart.",".$val["jumlah"].")";
-        $query = mysqli_query($konek, $sql);
+    $nama = $_POST['nama'];
+    $alamat = $_POST['alamat'];
+
+    $cart = serialize($_SESSION['cart']);
+
+    $query = mysqli_query($con, "INSERT INTO transaksi (tanggal, nama, alamat, cart) VALUES (CURRENT_DATE, '$nama', '$alamat', '$cart')");
+
+    if (mysqli_errno($con)) {
+        echo mysqli_error($con);
+        die();
     }
-    unset($_SESSION["cart"]);
-    header("location: cart.php");
 ?>

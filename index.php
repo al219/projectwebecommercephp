@@ -14,8 +14,7 @@
 		$produk_nama = $_POST['produk_nama'];
 		$produk_harga = $_POST['produk_harga'];
 		$produk_foto = $_POST['produk_foto'];
-		$produk_ketersediaan_stok = $_POST['produk_ketersediaan_stok'];
-		array_push($_SESSION['cart'], array('id' => $produk_id, 'nama' => $produk_nama, 'harga' => $produk_harga, 'foto' => $produk_foto, 'ketersediaan_stok' => $produk_ketersediaan_stok));
+		array_push($_SESSION['cart'], array('id' => $produk_id, 'nama' => $produk_nama, 'harga' => $produk_harga, 'foto' => $produk_foto));
 	}
 
 	$queryProduk = mysqli_query($con, "SELECT id, nama, harga, foto, detail FROM produk LIMIT 10");
@@ -315,10 +314,17 @@
 	    							</p>
 	    						</div>
 	    					</div>
-    						<p class="bottom-area d-flex px-3">
-    							<a href="#" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
-    						</p>
+    							<form method="post">
+										<p class="bottom-area d-flex px-3">
+											<input type="hidden" name="produk_id" value="<?php echo $produk['id']; ?>">
+											<input type="hidden" name="produk_nama" value="<?php echo $produk['nama']; ?>">
+											<input type="hidden" name="produk_harga" value="<?php echo $produk['harga']; ?>">
+											<input type="hidden" name="produk_foto" value="<?php echo $produk['foto']; ?>">
+											<!-- <input type="submit" value="Add to cart" class="add-to-cart text-center py-2 mr-1"> -->
+											<input type="submit" name="buy_now" value="ADD TO CART" class="buy-now text-center py-2">
+											<a href="tambah.php?id=<?php echo $data["id_produk"];?>" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+										</p>
+								</form>
     					</div>
     				</div>
     			</div>
