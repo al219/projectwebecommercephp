@@ -77,8 +77,6 @@
                 <a class="dropdown-item" href="checkout.php">Checkout</a>
               </div>
             </li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
 	          <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
@@ -108,15 +106,15 @@
 	          	<div class="row align-items-end">
 	          		<div class="col-md-6">
 	                	<div class="form-group">
-	                		<label for="firstname">Name</label>
-	                  		<input type="text" class="form-control" placeholder="">
+	                		<label for="name">Name</label>
+	                  		<input type="text" name="nama" class="form-control" placeholder="" >
 	                	</div>
 	              </div>
 
 		            <div class="col-md-6">
 		            	<div class="form-group">
-	                	<label for="streetaddress">Address</label>
-	                  <input type="text" class="form-control" placeholder="House number and street name">
+	                	<label for="address">Address</label>
+	                  <input type="text" name="alamat" class="form-control" placeholder="House number and street name"  >
 	                </div>
 		            </div>
 		            <div class="w-100"></div>
@@ -154,7 +152,7 @@
 	          	<div class="col-md-6">
 	          		<div class="cart-detail bg-light p-3 p-md-4">
 	          			<h3 class="billing-heading mb-4">Payment Method</h3>
-							<p><a href="#"class="btn btn-primary py-3 px-4">Place an order</a></p>
+							<p><a href="beli.php"class="btn btn-primary py-3 px-4">Place an order</a></p>
 					</div>
 	          	</div>
 	          </div>
@@ -219,7 +217,7 @@
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">fanfood2324@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>

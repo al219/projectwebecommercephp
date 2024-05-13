@@ -89,6 +89,8 @@
                 <a class="dropdown-item" href="checkout.php">Checkout</a>
               </div>
             </li>
+	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
 	          <li class="nav-item cta cta-colored"><a href="cart.php" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
@@ -146,6 +148,19 @@
 	    </div>
     </section>
 
+	<section>
+		<div>
+		<style>
+			h1 {
+				text-align: center;
+				margin: 50px;
+				padding: 100px;
+				font-weight: bold;
+			}
+		</style>
+			<h1>Order Sedang Diproses</h1>
+		</div>
+	</section>
     <!-- <section class="ftco-section ftco-no-pb ftco-no-pt bg-light">
 			<div class="container">
 				<div class="row">
@@ -278,7 +293,7 @@
     	</div>
     </section>-->
 
-    <section class="ftco-section bg-light">
+    <!-- <section class="ftco-section bg-light">
     	<div class="container">
 				<div class="row justify-content-center mb-3 pb-3">
           <div class="col-md-12 heading-section text-center ftco-animate">
@@ -293,7 +308,7 @@
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate">
     				<div class="product">
     					<a href="product-single.php?nama=<?php echo $produk['nama']; ?>" class="img-prod"><img class="img-fluid" src="image/<?php echo $produk['foto']; ?>" alt="Colorlib Template">
-    						<!-- <span class="status">30%</span> -->
+    						<span class="status">30%</span>
     						<div class="overlay"></div>
     					</a>
     					<div class="text py-3 px-3">
@@ -318,7 +333,7 @@
 											<input type="hidden" name="produk_nama" value="<?php echo $produk['nama']; ?>">
 											<input type="hidden" name="produk_harga" value="<?php echo $produk['harga']; ?>">
 											<input type="hidden" name="produk_foto" value="<?php echo $produk['foto']; ?>">
-											<!-- <input type="submit" value="Add to cart" class="add-to-cart text-center py-2 mr-1"> -->
+											 <input type="submit" value="Add to cart" class="add-to-cart text-center py-2 mr-1"> 
 											<input type="submit" name="buy_now" value="ADD TO CART" class="buy-now text-center py-2">
 											<a href="tambah.php?id=<?php echo $data["id_produk"];?>" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
 										</p>
@@ -330,7 +345,7 @@
 
     		</div>
     	</div>
-    </section>
+    </section> -->
 
     <!--<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);">
     	<div class="container">
@@ -540,7 +555,7 @@
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">fanfood2324@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>

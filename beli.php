@@ -13,4 +13,5 @@
         echo mysqli_error($con);
         die();
     }
+    header("location:payment.php");
 ?>

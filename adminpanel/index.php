@@ -38,6 +38,11 @@ $jumlahProduk = mysqli_num_rows($queryProduk);
     .no-decoration {
         text-decoration: none;
     }
+
+    .summary-order {
+        background-color: #fffdd0;
+        border-radius: 15px;
+    }
 </style>
 
 <body>
@@ -79,6 +84,21 @@ $jumlahProduk = mysqli_num_rows($queryProduk);
                                 <h3 class="fs-2">Product</h3>
                                 <p class="fs-4"><?php echo $jumlahProduk; ?> Products</p>
                                 <p><a href="produk.php" class="text-black">See Details</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-3">
+                    <div class="kotak summary-order p-3">
+                        <div class="row">
+                            <div class="col-6">
+                                <i class="fa-solid fa-box fa-7x text-black-65"></i>
+                            </div>
+                            <div class="col-6">
+                                <h3 class="fs-2">Order</h3>
+                                <p class="fs-4"><?php echo $jumlahTransaksi; ?> Orders</p>
+                                <p><a href="order.php" class="text-black">See Details</a></p>
                             </div>
                         </div>
                     </div>
